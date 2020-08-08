@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import * as d3 from 'd3';
-import './Visual.css'
+import './Visual.scss'
 
 const test={
     name:"CLOUD",
@@ -361,87 +361,88 @@ class Visual extends Component{
     render(){
         return(
           <>
-            <svg className="Visual">              
-            </svg>
-            <div className="add_res">
-              <button id="cancel">
-                  X
-                </button>
-                <p>
-                  ID:
-                <input id="id"></input>
-                </p>
-                <p>
-                  TYPE:
-                  <input id="type"value={this.props.value}></input>
-                </p>
-                <p>
-                  Region:
-                  <select id="region">
-                  </select>
-                </p>
-                <p>
-                  Platform:
-                  <select id="platform">
-                  </select>
-                </p>
-                <p>
-                  Size:
-                  <select id="size">
-                  </select>
-                </p>
-                <p>
-                  Parent:
-                  <select id="parent">
-                  </select>
-                </p>
-                <p>
-                  Link:
-                  <input id="link"></input>
-                </p>
-                <button id="apply">Apply</button>
-              <br/>
-            </div>
-            <div className="ResourceData">
-              <button id="cancel">
-                X
-              </button>
-              <p>
-                ID:
-              <input id="id"></input>
-              </p>
-              <p>
-                TYPE:
-                <select id="type">
-                </select>
-              </p>
-              <p>
-                Region:
-                <select id="region">
-                </select>
-              </p>
-              <p>
-                Platform:
-                <select id="platform">
-                </select>
-              </p>
-              <p>
-                Size:
-                <select id="size">
-                </select>
-              </p>
-              <p>
-                Parent:
-                <select id="parent">
-                </select>
-              </p>
-              <p>
-                Link:
-                <input id="link"></input>
-              </p>
-              <button id="apply">Apply</button>
-              <br/>
-            </div>  
+              <svg className="Visual">              
+              </svg>
+              <div className="add_res">
+                <button id="cancel">
+                    X
+                  </button>
+                  <p>
+                    ID : 
+                  <input className="visual-input" id="id"></input>
+                  </p>
+                  <p>
+                    TYPE:
+                    <input className="visual-input" id="type"value={this.props.value}></input>
+                  </p>
+                  <p>
+                    Region:
+                    <select className="visual-select" id="region">
+                    </select>
+                  </p>
+                  <p>
+                    Platform:
+                    <select className="visual-select" id="platform">
+                    </select>
+                  </p>
+                  <p>
+                    Size:
+                    <select className="visual-select" id="size">
+                    </select>
+                  </p>
+                  <p>
+                    Parent:
+                    <select className="visual-select" id="parent">
+                    </select>
+                  </p>
+                  <p>
+                    Link:
+                    <input className="visual-input" id="link"></input>
+                  </p>
+                  <button id="apply">Apply</button>
+                <br/>
+              </div>
+
+                <div className="ResourceData">
+                  <h2 className>ResourceData</h2>
+                  <p className="resource-data__title">
+                    ID
+                    <input className="visual-input" id="id"></input>
+                  </p>
+                  <p className="resource-data__title">
+                    TYPE
+                    <select className="visual-select" id="type">
+                    </select>
+                  </p>
+                  <p className="resource-data__title">
+                    Region
+                    <select className="visual-select" id="region">
+                    </select>
+                  </p>
+                  <p className="resource-data__title">
+                    Platform
+                    <select className="visual-select" id="platform">
+                    </select>
+                  </p>
+                  <p className="resource-data__title">
+                    Size
+                    <select className="visual-select" id="size">
+                    </select>
+                  </p>
+                  <p className="resource-data__title">
+                    Parent
+                    <select className="visual-select" id="parent">
+                    </select>
+                  </p>
+                  <p className="resource-data__title">
+                    Link
+                    <input className="visual-input" id="link"></input>
+                  </p>
+                  <button id="apply">APPLY</button>
+                  <button id="cancel">CLOSE</button>
+                  <br/>
+                </div> 
+    
           </>
         );
     }

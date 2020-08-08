@@ -1,0 +1,27 @@
+:root {
+    --text-lightgray-color: #cfcfcf;
+    --point-color: #ffc14d;
+    --point-hover-color: #eea545;
+    --text-gray-color: #494949;
+    --text-white-color: #ececec;
+    --background-color: #27262b;
+}
+
+:focus{
+    outline: none;
+}
+
+body {
+background-color: var(--background-color);
+}
+
+ol, ul, li{
+list-style: none;
+}
+
+.App {
+background-color: var(--background-color);
+height: 100%;
+width: 100vw;
+color: var(--text-white-color);
+}
